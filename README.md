@@ -2,6 +2,14 @@
 
 `pojodb` is a small database library for browser applications. Built on IndexedDB.
 
+Install it with your package manager:
+
+```sh
+npm install pojodb
+```
+
+The public API is available from the `pojodb/kv` and `pojodb/database` subpaths.
+
 ## KV
 
 ```js

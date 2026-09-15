@@ -1,7 +1,22 @@
 {
 	"name": "pojodb",
-	"version": "0.0.0",
+	"version": "0.1.0",
 	"description": "A small, typed JavaScript IndexedDB database library.",
+	"keywords": [
+		"browser",
+		"database",
+		"indexeddb",
+		"key-value"
+	],
+	"homepage": "https://github.com/mofax/pojodb#readme",
+	"bugs": {
+		"url": "https://github.com/mofax/pojodb/issues"
+	},
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/mofax/pojodb.git"
+	},
 	"files": [
 		"dist"
 	],
@@ -17,15 +32,20 @@
 			"import": "./dist/database.mjs"
 		}
 	},
+	"publishConfig": {
+		"access": "public"
+	},
 	"scripts": {
-		"check": "vp check",
+		"check": "oxfmt --check && oxlint",
 		"test": "vp test run",
-		"build": "vp pack"
+		"build": "vp pack",
+		"prepack": "npm run build",
+		"prepublishOnly": "npm run check && npm test"
 	},
 	"devDependencies": {
-		"fake-indexeddb": "^6.2.3",
+		"fake-indexeddb": "^6.2.5",
 		"typescript": "^5.9.3",
-		"vite-plus": "^0.1.22",
+		"vite-plus": "^0.1.24",
 		"vitest": "^5.0.1"
 	},
 	"packageManager": "bun@1.4.0"
