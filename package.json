@@ -1,0 +1,32 @@
+{
+	"name": "pojodb",
+	"version": "0.0.0",
+	"description": "A small, typed JavaScript IndexedDB database library.",
+	"files": [
+		"dist"
+	],
+	"type": "module",
+	"sideEffects": false,
+	"exports": {
+		"./kv": {
+			"types": "./dist/kv.d.mts",
+			"import": "./dist/kv.mjs"
+		},
+		"./database": {
+			"types": "./dist/database.d.mts",
+			"import": "./dist/database.mjs"
+		}
+	},
+	"scripts": {
+		"check": "vp check",
+		"test": "vp test run",
+		"build": "vp pack"
+	},
+	"devDependencies": {
+		"fake-indexeddb": "^6.2.3",
+		"typescript": "^5.9.3",
+		"vite-plus": "^0.1.22",
+		"vitest": "^5.0.1"
+	},
+	"packageManager": "bun@1.4.0"
+}

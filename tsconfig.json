@@ -1,0 +1,14 @@
+{
+	"compilerOptions": {
+		"allowJs": true,
+		"checkJs": true,
+		"declaration": true,
+		"outDir": ".typecheck",
+		"strict": true,
+		"target": "ES2022",
+		"module": "NodeNext",
+		"moduleResolution": "NodeNext",
+		"lib": ["ES2022", "DOM"]
+	},
+	"include": ["src/**/*.js", "vite.config.js"]
+}

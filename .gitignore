@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+
+# Generated package and type-check output
+dist/
+.typecheck/
+
+# Test and tool caches
+coverage/
+.vite/
+.vite-plus/
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Editor and operating-system files
+.DS_Store
+.idea/
+.vscode/
